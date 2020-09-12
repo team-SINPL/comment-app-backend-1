@@ -1,0 +1,29 @@
+{
+  
+  "local": {
+    "dialect": "mysql",
+    "user": "root",
+    "database": "commentApp",
+    "password": "ishanah",
+    "host": "127.0.0.1",
+    "port": "3306"
+  },
+  "dev": {
+    "dialect": "mysql",
+    "user": "root",
+    "database": "commentApp",
+    "password": "ishanah",
+    "host": "localhost",
+    "port": "3306"
+  },
+  "prod": {
+    "dialect": "mysql",
+    "user": "niklas",
+    "database": "blog_x_prod",
+    "password": "root",
+    "host": "138.197.176.136",
+    "port": "3306"
+  }
+  
+}
+
