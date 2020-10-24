@@ -23,8 +23,6 @@ exports.create = function (val, type, res) {
         }).catch(err => ResponseService.generalResponse(err, res, undefined, "Inserted"));
 }
 
-
-
 // Delete by ID
 exports.deleteById = function (id, type, res) {
     const model = getModelByType(type);
