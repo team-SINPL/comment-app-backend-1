@@ -1,10 +1,38 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
 
 const db = require('./config/connection');
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+// swagger definition ========================================
+
+var swaggerDefinition = {
+  info: {
+      title: 'Blog Site API Documentation',
+      version: '1.0.0',
+      description: 'Documentation for Blog Site backend',
+  },
+  host: ['localhost:5000'],
+  basePath: '/',
+  schemes:["https","http"]
+};
+
+// options for the swagger docs
+var options = {
+  swaggerDefinition: swaggerDefinition,
+  apis: ['./routes/*.js'],
+};
+
+
+// initialize swagger-jsdoc
+var swaggerSpec = swaggerJSDoc(options);
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+//============================================================
+
+const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
