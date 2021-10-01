@@ -12,6 +12,7 @@ const Comment = db.define('comment', {
     type: DataTypes.STRING,
     agreeCount: DataTypes.INTEGER,
     
+    
     disagreeCount: DataTypes.INTEGER,
     postId: DataTypes.INTEGER
 });
