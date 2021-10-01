@@ -4,6 +4,7 @@ const DataTypes = require('sequelize/lib/data-types');
 
 const Comment = db.define('comment', {
     id: {
+        
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
