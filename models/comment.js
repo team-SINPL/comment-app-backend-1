@@ -9,6 +9,7 @@ const Comment = db.define('comment', {
         autoIncrement: true,
         primaryKey: true
     },
+    
     content: DataTypes.STRING,
     type: DataTypes.STRING,
     agreeCount: DataTypes.INTEGER,
