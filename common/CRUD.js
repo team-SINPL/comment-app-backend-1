@@ -3,7 +3,6 @@ const ResponseService = require('./ResponseService'); // Response service
 const Post = require('../models/Post'); // Post model
 const Types = require('./Types') // Model types
 
-
 // Return model by type
 function getModelByType(type) {
     // eslint-disable-next-line default-case
@@ -12,7 +11,6 @@ function getModelByType(type) {
             return Post;
     }
 }
-
 
 // Create
 exports.create = function (val, type, res) {
